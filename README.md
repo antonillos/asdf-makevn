@@ -7,7 +7,8 @@ asdf plugin for [makevn](https://github.com/antonillos/makevn).
 ```sh
 asdf plugin add makevn https://github.com/antonillos/asdf-makevn.git
 asdf install makevn latest
-asdf global makevn latest
+MAKEVN_VERSION="$(asdf latest makevn | sed -n '$p')"
+asdf set -u makevn "${MAKEVN_VERSION}"
 ```
 
 ## MCP
